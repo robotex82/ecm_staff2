@@ -1,0 +1,9 @@
+%table.table
+  %thead
+    %tr
+      %th= Ecm::Staff::PersonPosition.human_attribute_name(:position)
+      %th= Ecm::Staff::PersonPosition.human_attribute_name(:begin_at)
+      %th= Ecm::Staff::PersonPosition.human_attribute_name(:end_at)
+  %tbody
+    - person.person_positions.each do |person_position|
+      = render 'ecm/staff/person_positions/person_position_as_table_row', person_position: person_position

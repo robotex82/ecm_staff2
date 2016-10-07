@@ -1,0 +1,3 @@
+%h1= Ecm::Staff::Person.model_name.human(count: :other)
+
+= render partial: 'ecm/staff/people/person_in_index', collection: @collection, as: :person

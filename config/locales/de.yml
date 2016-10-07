@@ -1,0 +1,60 @@
+de:
+  activerecord:
+    models:
+      ecm/staff/business_unit:
+        one: Abteilung
+        other: Abteilungen
+      ecm/staff/organisation:
+        one: Unternehmen
+        other: Unternehmen
+      ecm/staff/person:
+        one: Mitarbeiter
+        other: Mitarbeiter
+      ecm/staff/position:
+        one: Stelle
+        other: Stellen
+    attributes:
+      ecm/staff/business_unit:
+        description: Beschreibung
+        markup_language: Markupsprache
+        name: Name
+        organisation_id: Unternehmen
+        parent_id:  Übergeordnete Abteilung
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+      ecm/staff/organisation:
+        description: Beschreibung
+        markup_language: Markupsprache
+        name: Name
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+      ecm/staff/person:
+        age: Alter
+        birthdate: Geburtsdatum
+        description: Beschreibung
+        firstname: Vorname
+        fullname: Name
+        lastname: Nachname
+        markup_language: Markupsprache
+        person_positions: Stellen
+        position: Position
+        prefix: Prefix
+        preview_picture: Bild
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+      ecm/staff/position:
+        description: Beschreibung
+        markup_language: Markupsprache
+        name: Name
+        parent_id: Übergeordnete Position
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+  ecm:
+    staff:
+      people:
+        show:
+          back: 'Zurück'
+  routes:
+    business_units: 'abteilungen'
+    organsiations: 'organisationen'
+    people: 'mitarbeiter'

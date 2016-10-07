@@ -1,0 +1,13 @@
+.media.person-preview.well{ id: dom_id(person) }
+  .preview-picture.pull-left
+    - if person.preview_picture.present?
+      = link_to person do
+        = image_tag(person.preview_picture_image_url(:medium_thumb))
+    - else
+      .preview-picture-placeholder.well= link_to "&#x263A;".html_safe, person
+  .media-heading
+    %h4= link_to person.fullname_with_prefix, person
+  .person-description
+    = person.description.to_html.html_safe if person.description.present?
+  .person-positions
+    = render 'person_positions_table', person: person if person.person_positions.present?
