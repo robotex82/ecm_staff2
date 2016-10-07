@@ -1,6 +1,6 @@
 module Ecm
   module Staff
-    class ApplicationController < Configuration.frontend_base_controller.constantize
+    class ApplicationController < Configuration.base_controller.constantize
     end
   end
 end
