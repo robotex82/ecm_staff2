@@ -1,5 +1,5 @@
 module Ecm::Staff
-  class PeopleController < ApplicationController
+  class PeopleController < Ecm::Staff::ApplicationController
     def self.resource_class
       Person
     end
