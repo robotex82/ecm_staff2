@@ -1,12 +1,9 @@
-.media.person-preview.well{:id => dom_id(person)}
-  .preview-picture.pull-left
-    - if person.preview_picture.present?
-      = image_tag(person.preview_picture_image_url(:medium_thumb))
-    - else
-      .preview-picture-placeholder.well
-        &#x263A;
-  .media-heading
-  .person-description
-    = person.description.to_html.html_safe if person.description.present?
-  .person-positions
-    = render 'person_positions_table', person: person if person.person_positions.present?
+.row
+  .col-lg-12
+    .news-item.show
+      %h1= person.fullname_with_prefix
+
+      - if person.preview_picture.present?
+        %img.img-responsive.bottom-margin-2{:alt => person.preview_picture.description, :src => person.preview_picture.image.url, :title => person.preview_picture.description}/
+        
+      .item-body= mu(person, :description)

@@ -1,5 +1,11 @@
-%h1= @resource
+- content_for :meta_description, @resource.fullname_with_prefix
+- content_for :title, @resource.fullname_with_prefix
+
 = render @resource
-= link_to :back, class: "btn btn-primary link-back" do
-  %i.icon-arrow-left
-  = t('.back')
+
+.row
+  .col-lg-12
+    .page-actions
+      = bootstrap_button_group do
+        = bootstrap_button(to: :back, context: :default) do
+          = t('.back')
