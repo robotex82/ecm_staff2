@@ -5,4 +5,3 @@ require 'route_translator'
 
 require 'ecm/staff'
 require 'ecm/staff/engine'
-require 'ecm/staff/routing'

@@ -1,7 +1,11 @@
 Ecm::Staff::Engine.routes.draw do
   localized do
-    resources :organisations
-    resources :business_units
-    resources :people
+    scope :ecm_staff do
+      resources :organisations,  only: [:show, :index]
+      resources :business_units, only: [:show, :index]
+      resources :people,         only: [:show, :index]
+      
+      root to: 'people#index'
+    end
   end
 end
