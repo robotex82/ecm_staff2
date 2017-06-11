@@ -11,7 +11,7 @@ class Ecm::Staff::Position < Ecm::Staff::Base
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 
-  translates :description, :name, :slug if respond_to?(:translates)
+  translates :description, :name, :slug if table_exists?(:ecm_staff_position_translations)
 
   # markup support
   acts_as_markup language: :variable,
