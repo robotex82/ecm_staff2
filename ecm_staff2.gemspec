@@ -19,6 +19,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '>= 4.0'
   s.add_dependency 'awesome_nested_set'
   s.add_dependency 'friendly_id'
-  s.add_dependency 'globalize'
   s.add_dependency 'route_translator'
 end

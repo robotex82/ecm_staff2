@@ -7,11 +7,6 @@ class Ecm::Staff::Position < Ecm::Staff::Base
   # callbacks
   after_initialize :set_defaults, if: :new_record?
 
-  # globalization support
-  translates :description, :name, :slug
-  # attr_accessible :translations, :translations_attributes
-  accepts_nested_attributes_for :translations
-
   # friendly id support
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
