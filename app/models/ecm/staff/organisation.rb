@@ -5,6 +5,8 @@ class Ecm::Staff::Organisation < Ecm::Staff::Base
   # callbacks
   after_initialize :set_defaults, if: :new_record?
 
+  translates :description, :name, :slug if respond_to?(:translates)
+
   # friendly id support
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]

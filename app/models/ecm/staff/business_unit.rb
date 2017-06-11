@@ -9,6 +9,8 @@ class Ecm::Staff::BusinessUnit < Ecm::Staff::Base
 
   # default scope
   # default_scope order: 'lft'
+  
+  translates :description, :name, :slug if respond_to?(:translates)
 
   # friendly id support
   extend FriendlyId

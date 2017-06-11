@@ -21,6 +21,8 @@ class Ecm::Staff::Person < Ecm::Staff::Base
   acts_as_list
   # default_scope order: 'position ASC'
 
+  translates :description, :prefix, :slug if respond_to?(:translates)
+
   # callbacks
   after_initialize :set_defaults, if: :new_record?
 
