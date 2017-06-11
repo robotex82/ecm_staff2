@@ -1,4 +1,4 @@
-class CreateEcmStaffPersonPositions < ActiveRecord::Migration
+class CreateEcmStaffPersonPositions < ActiveRecord::Migration[4.2]
   def change
     create_table :ecm_staff_person_positions do |t|
       t.references :person

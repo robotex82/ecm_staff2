@@ -1,4 +1,4 @@
-class CreateEcmStaffPositionTranslations < ActiveRecord::Migration
+class CreateEcmStaffPositionTranslations < ActiveRecord::Migration[4.2]
   def up
     Ecm::Staff::Position.create_translation_table!({
                                                      name: :string,

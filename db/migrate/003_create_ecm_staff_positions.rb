@@ -1,4 +1,4 @@
-class CreateEcmStaffPositions < ActiveRecord::Migration
+class CreateEcmStaffPositions < ActiveRecord::Migration[4.2]
   def change
     create_table :ecm_staff_positions do |t|
       t.string :name

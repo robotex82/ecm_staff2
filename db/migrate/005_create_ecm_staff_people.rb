@@ -1,4 +1,4 @@
-class CreateEcmStaffPeople < ActiveRecord::Migration
+class CreateEcmStaffPeople < ActiveRecord::Migration[4.2]
   def change
     create_table :ecm_staff_people do |t|
       t.string :prefix

@@ -1,4 +1,4 @@
-class CreateEcmStaffBusinessUnits < ActiveRecord::Migration
+class CreateEcmStaffBusinessUnits < ActiveRecord::Migration[4.2]
   def change
     create_table :ecm_staff_business_units do |t|
       t.references :organisation

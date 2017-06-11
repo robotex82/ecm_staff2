@@ -57,7 +57,8 @@ de:
         show:
           back: 'Zurück'
   routes:
-    ecm_staff: 'team'
+    ecm_staff_engine: team
     business_units: 'abteilungen'
     organsiations: 'organisationen'
     people: 'mitarbeiter'
+    positions: 'stellen'

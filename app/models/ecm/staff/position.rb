@@ -4,11 +4,6 @@ class Ecm::Staff::Position < Ecm::Staff::Base
   has_many :people, through: :person_positions,
                     class_name: Ecm::Staff::Configuration.person_class_name
 
-  # # attributes
-  # attr_accessible :description,
-  #                 :name,
-  #                 :parent_id
-
   # callbacks
   after_initialize :set_defaults, if: :new_record?
 

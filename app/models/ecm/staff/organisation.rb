@@ -2,11 +2,6 @@ class Ecm::Staff::Organisation < Ecm::Staff::Base
   # associations
   has_many :business_units
 
-  # # attributes
-  # attr_accessible :description,
-  #                 :markup_language,
-  #                 :name
-
   # callbacks
   after_initialize :set_defaults, if: :new_record?
 

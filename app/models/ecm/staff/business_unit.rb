@@ -4,14 +4,6 @@ class Ecm::Staff::BusinessUnit < Ecm::Staff::Base
   has_many :person_positions, dependent: :restrict_with_error
   has_many :people, through: :person_positions
 
-  # # attributes
-  # attr_accessible :description,
-  #                 :name,
-  #                 :markup_language,
-  #                 :organisation_id,
-  #                 :parent_id,
-  #                 :slug
-
   # callbacks
   after_initialize :set_defaults, if: :new_record?
 
@@ -35,7 +27,6 @@ class Ecm::Staff::BusinessUnit < Ecm::Staff::Base
   acts_as_nested_set
 
   # validations
-  validates :organisation, presence: true
   validates :name, presence: true,
                    uniqueness: { scope: [:organisation_id] }
 

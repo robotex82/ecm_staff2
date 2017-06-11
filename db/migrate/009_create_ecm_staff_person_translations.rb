@@ -1,4 +1,4 @@
-class CreateEcmStaffPersonTranslations < ActiveRecord::Migration
+class CreateEcmStaffPersonTranslations < ActiveRecord::Migration[4.2]
   def up
     Ecm::Staff::Person.create_translation_table!({
                                                    prefix: :string,

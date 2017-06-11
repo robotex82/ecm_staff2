@@ -1,33 +1,21 @@
 class Ecm::Staff::Person < Ecm::Staff::Base
   # associations
   has_many :person_positions, ->() { order(begin_at: :desc) },
-           class_name: Ecm::Staff::PersonPosition,
+           class_name: 'Ecm::Staff::PersonPosition',
            inverse_of: :person
   accepts_nested_attributes_for :person_positions, allow_destroy: true
 
   has_many :positions, through: :person_positions,
-                       class_name: Ecm::Staff::Position
+                       class_name: 'Ecm::Staff::Position'
 
   has_many :attached_pictures, as: :pictureable,
-                               class_name: Ecm::Pictures::AttachedPicture,
+                               class_name: 'Ecm::Pictures::AttachedPicture',
                                inverse_of: :pictureable
   has_many :pictures, through: :attached_pictures,
-                      class_name: Ecm::Pictures::Picture
+                      class_name: 'Ecm::Pictures::Picture'
 
   accepts_nested_attributes_for :attached_pictures, allow_destroy: true
   accepts_nested_attributes_for :pictures, allow_destroy: true
-
-  # # attributes
-  # attr_accessible :attached_pictures_attributes,
-  #                 :birthdate,
-  #                 :description,
-  #                 :firstname,
-  #                 :lastname,
-  #                 :markup_language,
-  #                 :person_positions_attributes,
-  #                 :pictures_attributes,
-  #                 :position,
-  #                 :prefix
 
   # acts as list
   acts_as_list
