@@ -5,7 +5,7 @@ class Ecm::Staff::Organisation < Ecm::Staff::Base
   # callbacks
   after_initialize :set_defaults, if: :new_record?
 
-  translates :description, :name, :slug if table_exists?(:ecm_staff_organisation_translations)
+  translates :description, :name, :slug if ActiveRecord::Base.table_exists?(:ecm_staff_organisation_translations)
 
   # friendly id support
   extend FriendlyId

@@ -10,7 +10,7 @@ class Ecm::Staff::BusinessUnit < Ecm::Staff::Base
   # default scope
   # default_scope order: 'lft'
   
-  translates :description, :name, :slug if table_exists?(:ecm_staff_business_unit_translations)
+  translates :description, :name, :slug if ActiveRecord::Base.table_exists?(:ecm_staff_business_unit_translations)
 
   # friendly id support
   extend FriendlyId

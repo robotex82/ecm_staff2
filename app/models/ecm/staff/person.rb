@@ -21,7 +21,7 @@ class Ecm::Staff::Person < Ecm::Staff::Base
   acts_as_list
   # default_scope order: 'position ASC'
 
-  translates :description, :prefix, :slug if table_exists?(:ecm_staff_person_translations)
+  translates :description, :prefix, :slug if ActiveRecord::Base.table_exists?(:ecm_staff_person_translations)
 
   # callbacks
   after_initialize :set_defaults, if: :new_record?
