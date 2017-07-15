@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :ecm_staff_person, class: Ecm::Staff::Person do
     firstname 'John'
     lastname 'Doe'
+    markup_language 'textile'
   end
 end
