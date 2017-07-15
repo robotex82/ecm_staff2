@@ -2,7 +2,7 @@ class DropTranslationTableForOrgansiations < ActiveRecord::Migration[4.2]
   def change
     reversible do |dir|
       dir.up do
-        Ecm::Staff::Organisation.drop_translation_table!(migrate_data: true)
+        Ecm::Staff::Organisation.drop_translation_table!
       end
 
       dir.down do
