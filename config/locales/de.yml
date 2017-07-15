@@ -19,7 +19,9 @@ de:
         markup_language: Markupsprache
         name: Name
         organisation_id: Unternehmen
+        organisation: Unternehmen
         parent_id:  Übergeordnete Abteilung
+        parent:  Übergeordnete Abteilung
         created_at: Erstellt am
         updated_at: Aktualisiert am
       ecm/staff/organisation:
