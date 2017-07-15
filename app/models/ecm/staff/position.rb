@@ -9,7 +9,7 @@ class Ecm::Staff::Position < Ecm::Staff::Base
 
   # friendly id support
   extend FriendlyId
-  friendly_id :name, use: [:slugged, :finders]
+  friendly_id :name, use: [:slugged]
 
   translates :description, :name, :slug if ActiveRecord::Base.connection.table_exists?(:ecm_staff_position_translations)
 

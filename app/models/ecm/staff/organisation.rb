@@ -9,7 +9,7 @@ class Ecm::Staff::Organisation < Ecm::Staff::Base
 
   # friendly id support
   extend FriendlyId
-  friendly_id :name, use: [:slugged, :finders]
+  friendly_id :name, use: [:slugged]
 
   # markup support
   acts_as_markup language: :variable,

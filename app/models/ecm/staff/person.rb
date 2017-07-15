@@ -28,7 +28,7 @@ class Ecm::Staff::Person < Ecm::Staff::Base
 
   # friendly id support
   extend FriendlyId
-  friendly_id :fullname, use: [:slugged, :finders]
+  friendly_id :fullname, use: [:slugged]
 
   # markup support
   acts_as_markup language: :variable,
