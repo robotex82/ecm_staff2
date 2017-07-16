@@ -27,7 +27,7 @@ module Ecm::Staff
     end
 
     def load_resource
-      resource_scope.find(params[:id])
+      resource_scope.friendly.find(params[:id])
     end
   end
 end
