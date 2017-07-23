@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :ecm_staff_business_unit, class: Ecm::Staff::BusinessUnit do
     association :organisation, factory: :ecm_staff_organisation
     sequence(:name) { |i| "Business Unit ##{i}" }
+    markup_language 'textile'
   end
 end
