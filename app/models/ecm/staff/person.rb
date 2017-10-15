@@ -61,7 +61,7 @@ class Ecm::Staff::Person < Ecm::Staff::Base
     pictures.first
   end # def
 
-  def preview_picture_image_url(style = nil)
+  def preview_picture_image_url(style = Ecm::Staff::Configuration.preview_picture_image_style)
     preview_picture.image.url(style) if preview_picture.respond_to?(:image) && preview_picture.image.respond_to?(:url)
   end # def
 

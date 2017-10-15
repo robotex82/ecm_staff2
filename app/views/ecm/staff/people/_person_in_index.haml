@@ -1,6 +1,7 @@
-= bootstrap_responsive_media_object(image_options: { src: person.preview_picture_image_url(:medium_thumb)}) do
-  %h4= person.fullname_with_prefix
-  .truncate.lines-5
-    = person.description.to_html.html_safe
-  = bootstrap_button(to: ecm_staff.url_for(person), context: :primary) do
-    - t('.more')
+%div{ id: dom_id(person) }
+  = bootstrap_responsive_media_object(image_options: { src: person.preview_picture_image_url}) do
+    %h4= person.fullname_with_prefix
+    .truncate.lines-5
+      = person.description.to_html.html_safe
+    = bootstrap_button(to: ecm_staff.url_for(person), context: :primary) do
+      - t('.more')
