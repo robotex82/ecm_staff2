@@ -19,7 +19,7 @@ class Ecm::Staff::Person < Ecm::Staff::Base
 
   # acts as list
   acts_as_list
-  # default_scope order: 'position ASC'
+  default_scope { order(position: :asc) }
 
   translates :description, :prefix, :slug if ActiveRecord::Base.connection.table_exists?(:ecm_staff_person_translations)
 
